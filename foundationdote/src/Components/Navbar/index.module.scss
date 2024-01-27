@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 990;
+    width: 100%;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: 0.4s;
+    .navbar{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1140px;
+        height: 100%;
+        .left__side{
+            h1{
+                font-size: 32px;
+                font-family: Anton;
+                color: #fd5f00;
+                cursor: pointer;
+            }
+        }
+        .right__side{
+            ul{
+                display: flex;
+                align-items: center;
+                list-style: none;
+                gap: 20px;
+                li{
+                    font-size: 16px;
+                    font-family: Nunito;
+                    cursor: pointer;
+                    transition: 300ms;
+                    &:hover{
+                        color: #fd610091;
+                    }
+                }
+                li:nth-of-type(1){
+                    color: #fd5f00;
+                }
+            }
+        }
+        .responsiveMenuButton{
+            display: none;
+            border: none;
+            background-color: transparent;
+            .responsiveMenu{
+                display: none;
+                font-size: 30px;
+                cursor: pointer;
+                &:hover{
+                    color: white;
+                    background-color: grey;
+                    border-radius: 12px;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+    width: 50%;
+    height: 100dvh;
+    top: 0;
+    right: 0;
+    background-color: #fd5f00;
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        list-style: none;
+        li{
+            transition: 300ms;
+            font-family: Nunito;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            &:hover{
+                color: rgb(209, 208, 208);
+            }
+        }
+    }
+    .closeMenuButton{
+        position: absolute;
+            top: 0px;
+            right: 0px;
+            border: none;
+            background-color: transparent;
+        .closeMenu{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-size: 30px;
+            color: #939393;
+            cursor: pointer;
+        }
+    }
+}
+
+
+// Reponsive
+@media screen and (max-width: 768px) {
+    header{
+        .navbar{
+            .right__side{
+                display: none;
+            }
+            .responsiveMenuButton{
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                .responsiveMenu{
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1140px) {
+    header{
+        .navbar{
+            padding: 0 10px ;
+        }
+    }
+}

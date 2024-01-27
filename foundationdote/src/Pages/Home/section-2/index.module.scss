@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .box{
+        width: calc(100% / 12 * 4);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        .content{
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            height: 90%;
+            padding: 10px;
+            flex-direction: column;
+            gap: 10px;
+            h2{
+                font-size: 2rem;
+                font-family: Anton;
+                color: white;
+            }
+            p{
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 1rem;
+                font-family: Nunito;
+            }
+        }
+    }
+    .box:nth-of-type(1){
+        background-color: #939393;
+    }
+    .box:nth-of-type(2){
+        background-color: #fd5f00;
+    }
+    .box:nth-of-type(3){
+        background-color: #a23131;
+    }   
+}
+
+// Reponsive
+@media screen and (max-width: 768px) {
+    .wrapper{
+        .box{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+.contact_us_section {
+  width: 100%;
+  background-color: #f8f9fa;
+  .container {
+    width: 500px;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    .tittle {
+      text-align: center;
+      h4 {
+        font-size: 64px;
+        font-family: Anton;
+      }
+    }
+    .forma {
+      width: 100%;
+      form {
+        margin-top: 50px;
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        gap: 15px;
+        .name__form {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          input {
+            width: 45%;
+            height: 55px;
+          }
+        }
+        input {
+          height: 55px;
+          background-color: white;
+          font-family: Nunito;
+          outline: none;
+          border: 1px solid rgba(128, 128, 128, 0.486);
+          border-radius: 5px;
+          font-size: 17px;
+          padding: 0 0 0 5px;
+          &::-webkit-input-placeholder {
+            font-size: 17px;
+          }
+        }
+        textarea {
+          outline: none;
+          border: 1px solid rgba(128, 128, 128, 0.486);
+          border-radius: 5px;
+          background-color: white;
+          font-family: Nunito;
+            font-size: 17px;
+            padding: 10px 5px;
+          &::-webkit-input-placeholder {
+            font-size: 17px;
+          }
+        }
+        button {
+          padding: 16px 48px;
+          width: 210px;
+          height: 58px;
+          background-color: #fd5f00;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact_us_section{
+        .container{
+            width: 95%;
+            .tittle{
+                h4{
+                    font-size: 32px;
+                }
+            }
+            .forma{
+                .name__form{
+                    flex-direction: column;
+                    gap: 15px;
+                    input{
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}

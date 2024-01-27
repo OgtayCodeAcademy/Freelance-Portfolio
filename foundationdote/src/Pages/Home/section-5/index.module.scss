@@ -1,0 +1,131 @@
+section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    width: 95%;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .tittle {
+      width: 100%;
+      text-align: center;
+      h1 {
+        font-family: Anton;
+        font-size: 4rem;
+      }
+      p {
+        font-size: 16px;
+        font-family: Nunito;
+        color: #939393;
+        max-width: 635px;
+        margin: 0 auto;
+      }
+    }
+    .cards__wrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      justify-content: space-between;
+      .card {
+        width: calc(100% / 12 * 3.8);
+        border: 1px solid #9393933e;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 430px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px 15px;
+        .image {
+          width: 130px;
+          height: 130px;
+          border-radius: 50%;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .profession {
+          h4 {
+            text-align: center;
+            font-size: 12px;
+            font-family: Nunito;
+            color: #b8b8b8;
+          }
+        }
+        .about {
+          p {
+            font-size: 16px;
+            font-family: Nunito;
+            color: #939393;
+          }
+        }
+        .socialLinks {
+          display: flex;
+          gap: 5px;
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fd5f00;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+            border: 1px solid #fd5f00;
+            transition: 300ms;
+            &:hover{
+                background-color: white;
+            }
+            &:hover .Icon{
+              color: #fd5f00;
+            }
+            .Icon {
+              transition: 300ms;
+              font-size: 20px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive 
+@media screen and (max-width: 768px) {
+    section{
+        .container{
+            .cards__wrapper{
+                row-gap: 15px;
+                .card{
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    section{
+        .container{
+            .tittle{
+                h1{
+                    font-size: 2.5rem;
+                }
+            }
+            .cards__wrapper{
+                .card{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
